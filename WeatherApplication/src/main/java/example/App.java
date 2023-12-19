@@ -36,5 +36,12 @@ public class App
         // Print the coordinates we got:
         System.out.println("Lat: " + cityProperties.getLatitude());
         System.out.println("Long: " + cityProperties.getLongitude());
+
+        // Make the request and print results
+        WeatherApi weatherApi = new WeatherApi(cityProperties.getLatitude(), cityProperties.getLongitude());
+        weatherApi.printHourlyTable();
+
+        // Print the end
+        System.out.println("END");
     }
 }
